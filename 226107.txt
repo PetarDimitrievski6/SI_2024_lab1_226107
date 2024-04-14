@@ -1,0 +1,50 @@
+git init
+git remote add origin https://github.com/PetarDimitrievski6/SI_2024_lab1_226107.git
+nano README.md
+git add README.md
+git commit -m "Initial commit"
+git add .
+git commit -m "Add starter code"
+git push -u origin master
+git branch bug1
+git branch bug2
+git checkout bug1
+nano SILab1_1.java
+git add SILab1_1.java
+git commit -m "Fix wrong condition in filterOddLengthStrings"
+git checkout bug2
+nano SILab1_2.java
+git add SILab1_2.java
+git commit -m "Fix wrong condition in makeBigStringFrom"
+git checkout bug1
+nano SILab1Main.java
+git add SILab1Main.java
+git commit -m "Call method filterOddLengthStrings in main class"
+git checkout bug2
+nano SILab1Main.java
+git add SILab1Main.java
+git commit -m "Call method makeBigStringFrom in main class"
+git push -u origin master
+git push -u origin bug1
+git push -u origin bug2
+git checkout master
+git merge bug1 (FF)
+git push -u origin master
+git push -u origin bug1
+git push -u origin bug2
+git checkout bug2
+git rebase master (Conflict)
+nano SILab1Main.java
+git add SILab1Main.java
+git rebase --continue
+git checkout master
+git merge bug2 (FF)
+git push -u origin master
+git push -u origin bug1
+git push -u -f origin bug2
+git log
+nano logs.txt
+nano 226107.txt
+git add .
+git commit -m "Final commit"
+git push -u origin master
